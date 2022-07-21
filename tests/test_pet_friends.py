@@ -55,18 +55,7 @@ def test_add_new_pet_with_valid_data(get_api_key, name='котэ', animal_type='
     assert status == 200
     assert result['name'] == name, result['animal_type'] == animal_type and result['age'] == age
 
-## Тест не мой - коллеги по QAP - у него не добавлялся новый pet, у меня все добавилось.
-## С фикстурой не запустился
-# def test_add_new_pet_with_valid_data(get_api_key, name='Kotya', animal_type='Catt', age='1', pet_photo='images/Kotya.jpeg'):
-#     pet_photo = os.path.join(os.path.dirname(__file__), pet_photo)
-#     #_, auth_key = pf.get_api_key(valid_email, valid_password)
-#     print(pet_photo)
-#     print(auth_key)
-#     breakpoint
-#     status, result = pf.add_new_pet(get_api_key, name, animal_type, age, pet_photo)
-#     assert status == 200
-#     assert result['name'] == name
-#
+
 # Тест с авторизацией через фикстуру
 def test_successful_delete_self_pet(get_api_key):
     """Проверяем возможность удаления питомца"""
